@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meus Projetos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:  #0a2463;
+      --red:   #e8192c;
+      --dark:  #07101f;
+      --card:  #0e1c35;
+      --border: rgba(255,255,255,0.08);
+      --text:  rgba(255,255,255,0.6);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--dark);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    /* grid background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 44px 44px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* glow orbs */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.18;
+    }
+    .orb-1 { width: 520px; height: 520px; background: var(--navy); top: -160px; left: -160px; }
+    .orb-2 { width: 380px; height: 380px; background: var(--red);  bottom: -100px; right: -100px; }
+
+    /* ── LAYOUT ─────────────────────────────────────────────── */
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 64px 24px 100px;
+    }
+
+    /* ── HEADER ─────────────────────────────────────────────── */
+    header {
+      margin-bottom: 64px;
+      animation: fadeDown 0.55s ease both;
+    }
+    .header-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 14px;
+      display: block;
+    }
+    h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      font-weight: 800;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+    h1 em {
+      font-style: normal;
+      color: var(--red);
+    }
+    .header-sub {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    /* ── SECTION TITLE ──────────────────────────────────────── */
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      animation: fadeIn 0.55s 0.15s ease both;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── CARDS GRID ─────────────────────────────────────────── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+
+    /* ── CARD ───────────────────────────────────────────────── */
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--red);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,255,255,0.16);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+    }
+    .card:hover::before { transform: scaleX(1); }
+
+    /* thumbnail area */
+    .card-thumb {
+      width: 100%;
+      height: 140px;
+      background: linear-gradient(135deg, var(--navy) 0%, #1255b5 60%, var(--red) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .card-thumb::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.15);
+    }
+    .card-thumb-icon {
+      position: relative;
+      z-index: 1;
+      font-size: 38px;
+      line-height: 1;
+    }
+    /* tag on thumb */
+    .card-tag {
+      position: absolute;
+      bottom: 10px;
+      left: 12px;
+      z-index: 2;
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    /* card body */
+    .card-body {
+      padding: 20px 20px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.35;
+    }
+    .card-desc {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* card footer */
+    .card-footer {
+      padding: 12px 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-file {
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.25);
+      font-family: 'Courier New', monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 70%;
+    }
+    .card-arrow {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .card:hover .card-arrow {
+      background: var(--red);
+      border-color: var(--red);
+    }
+    .card-arrow svg {
+      width: 12px; height: 12px;
+      stroke: rgba(255,255,255,0.7);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.2s;
+    }
+    .card:hover .card-arrow svg { stroke: #fff; }
+
+    /* ── ADD NEW CARD (placeholder) ─────────────────────────── */
+    .card-add {
+      border-style: dashed;
+      border-color: rgba(255,255,255,0.1);
+      background: transparent;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+      gap: 10px;
+      cursor: default;
+    }
+    .card-add:hover {
+      transform: none;
+      border-color: rgba(255,255,255,0.18);
+      box-shadow: none;
+    }
+    .card-add::before { display: none; }
+    .card-add-icon {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      border: 1.5px dashed rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      color: rgba(255,255,255,0.2);
+    }
+    .card-add-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.18);
+      text-align: center;
+    }
+
+    /* ── FOOTER ─────────────────────────────────────────────── */
+    footer {
+      margin-top: 80px;
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      animation: fadeIn 0.6s 0.4s ease both;
+    }
+    .footer-brand {
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .footer-note {
+      font-size: 11px;
+      color: rgba(255,255,255,0.15);
+    }
+
+    /* ── ANIMATIONS ─────────────────────────────────────────── */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* ── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 560px) {
+      .page { padding: 40px 16px 72px; }
+      header { margin-bottom: 44px; }
+      .grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header>
+      <span class="header-label">Portfólio</span>
+      <h1>Meus <em>Projetos</em></h1>
+      <p class="header-sub">Coleção de páginas e templates HTML. Clique em um card para visualizar o projeto.</p>
+    </header>
+
+    <!-- SECTION LABEL -->
+    <div class="section-label">Projetos disponíveis</div>
+
+    <!-- CARDS GRID -->
+    <div class="grid">
+
+      <!-- ── CARD: Riomed Email ─────────────────────────── -->
+      <a href="riomed-email-responsivo.html" class="card">
+        <div class="card-thumb">
+          <span class="card-thumb-icon">✉️</span>
+          <span class="card-tag">Email Marketing</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Riomed — Boas-vindas</div>
+          <div class="card-desc">Email marketing responsivo de boas-vindas para farmácias. Apresentação institucional, grid de marcas e CTAs.</div>
+        </div>
+        <div class="card-footer">
+          <span class="card-file">riomed-email-responsivo.html</span>
+          <div class="card-arrow">
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- ── CARD PLACEHOLDER: adicione mais projetos aqui ─ -->
+      <!--
+        Para adicionar um novo projeto, copie o bloco abaixo,
+        cole antes do card .card-add e preencha os campos:
+
+        <a href="nome-do-arquivo.html" class="card">
+          <div class="card-thumb">
+            <span class="card-thumb-icon">🔥</span>
+            <span class="card-tag">Categoria</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Nome do Projeto</div>
+            <div class="card-desc">Breve descrição do projeto.</div>
+          </div>
+          <div class="card-footer">
+            <span class="card-file">nome-do-arquivo.html</span>
+            <div class="card-arrow">
+              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
+          </div>
+        </a>
+      -->
+
+      <!-- card de placeholder visual -->
+      <div class="card card-add">
+        <div class="card-add-icon">+</div>
+        <div class="card-add-text">Próximo projeto</div>
+      </div>
+
+    </div><!-- /grid -->
+
+    <!-- FOOTER -->
+    <footer>
+      <span class="footer-brand">Projetos HTML</span>
+      <span class="footer-note">GitHub Pages</span>
+    </footer>
+
+  </div><!-- /page -->
+
+</body>
+</html>
