@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bem-vindo à Riomed – Sua farmácia sempre à frente!</title>
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background-color: #f0f2f5;
+      color: #333333;
+      -webkit-text-size-adjust: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ── WRAPPER ─────────────────────────────────────────────── */
+    .email-wrapper {
+      width: 100%;
+      background-color: #f0f2f5;
+      padding: 20px 0 40px;
+    }
+    .email-container {
+      width: 600px;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    /* ── HEADER ──────────────────────────────────────────────── */
+    .header-placeholder {
+      width: 100%;
+      height: 75px;
+      background: url("https://email-editor-production.s3.amazonaws.com/images/947552/editor_images/Design%20sem%20nome.png") center/cover no-repeat;
+      display: block;
+      border-bottom: 3px solid #e8192c;
+    }
+
+    /* ── HERO BANNER ─────────────────────────────────────────── */
+    .hero-banner {
+      width: 100%;
+      min-height: 280px;
+      background: url("https://email-editor-production.s3.amazonaws.com/images/947552/editor_images/Design%20sem%20nome.jpg") center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+      display: block;
+      padding: 40px 44px;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 360px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: #e8192c;
+      color: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 2px;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .hero-subtitle {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.65;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.96);
+    }
+
+    /* ── SECTION STYLES ──────────────────────────────────────── */
+    .body-section { padding: 44px 44px 0; }
+    .section-eyebrow {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #e8192c;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: #0a2463;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+    .section-body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.75;
+      color: #444444;
+    }
+    .section-body strong { font-weight: 700; color: #0a2463; }
+
+    /* ── NUMBERS STRIP ───────────────────────────────────────── */
+    .numbers-strip {
+      margin: 36px 0 0;
+      background: #0a2463;
+      border-radius: 6px;
+      padding: 28px 16px;
+      width: 100%;
+    }
+    .numbers-strip table { width: 100%; border-collapse: collapse; }
+    .number-cell {
+      text-align: center;
+      padding: 0 8px;
+      border-right: 1px solid rgba(255,255,255,0.14);
+    }
+    .number-cell:last-child { border-right: none; }
+    .number-value {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: #ffffff;
+      display: block;
+      line-height: 1;
+      margin-bottom: 7px;
+    }
+    .number-label {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+
+    /* ── DIVIDER ─────────────────────────────────────────────── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #e0e4ef, transparent);
+      margin: 40px 44px;
+    }
+
+    /* ── SERVICES ────────────────────────────────────────────── */
+    .services-section { padding: 0 44px; }
+    .services-table { width: 100%; border-collapse: collapse; }
+    .service-td { width: 33.33%; vertical-align: top; padding: 0 5px 0 0; }
+    .service-td:nth-child(2) { padding: 0 3px; }
+    .service-td:nth-child(3) { padding: 0 0 0 5px; }
+    .service-card {
+      background: #f5f7fb;
+      border-radius: 6px;
+      padding: 22px 16px;
+      border-top: 3px solid #e8192c;
+      height: 100%;
+    }
+    .service-icon { font-size: 24px; margin-bottom: 12px; display: block; }
+    .service-name {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #0a2463;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .service-desc {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #666666;
+      line-height: 1.6;
+    }
+
+    /* ── INDUSTRIES ──────────────────────────────────────────── */
+    .industries-banner {
+      margin: 0 44px 40px;
+      border-radius: 6px;
+      border: 1px solid #dde1ee;
+      overflow: hidden;
+    }
+    .industries-header { background: #0a2463; padding: 22px 28px; }
+    .industries-header .section-eyebrow { color: rgba(255,255,255,0.5); margin-bottom: 8px; }
+    .industries-header .section-title { color: #fff; font-size: 28px; margin-bottom: 6px; }
+    .industries-header .section-title span { color: #e8192c; }
+    .industries-subtext {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.6);
+    }
+    .logos-grid { padding: 16px; background: #f5f7fb; }
+    .logos-table { width: 100%; border-collapse: collapse; }
+    .logo-td { width: 25%; padding: 5px; }
+    .logo-placeholder {
+      display: block;
+      background: #ffffff;
+      border: 1px solid #dde1ee;
+      border-radius: 6px;
+      text-decoration: none;
+      text-align: center;
+      padding: 10px 6px;
+      line-height: 0;
+    }
+    .logo-placeholder img {
+      display: inline-block;
+      max-width: 100%;
+      max-height: 36px;
+      width: auto;
+      height: auto;
+    }
+
+    /* ── MID BANNER ──────────────────────────────────────────── */
+    .mid-banner {
+      width: 100%;
+      min-height: 170px;
+      background: linear-gradient(100deg, #e8192c 0%, #9b1a28 100%);
+      position: relative;
+      overflow: hidden;
+      display: block;
+      padding: 32px 44px;
+      margin-top: 0;
+    }
+    .mid-banner-content { position: relative; z-index: 2; }
+    .mid-banner-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .mid-banner-sub {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 22px;
+      line-height: 1.55;
+    }
+
+    /* ── BUTTONS ─────────────────────────────────────────────── */
+    .cta-btn {
+      display: inline-block;
+      background: #ffffff;
+      color: #e8192c;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      border-radius: 3px;
+      text-decoration: none;
+    }
+    .cta-btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: #ffffff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 10px 22px;
+      border-radius: 3px;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.65);
+      margin-left: 10px;
+    }
+    .cta-primary {
+      display: inline-block;
+      background: #e8192c;
+      color: #ffffff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      border-radius: 3px;
+      text-decoration: none;
+    }
+    .cta-secondary {
+      display: inline-block;
+      background: transparent;
+      color: #0a2463;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: 3px;
+      text-decoration: none;
+      border: 2px solid #0a2463;
+    }
+
+    /* ── CTA SECTION ─────────────────────────────────────────── */
+    .cta-section { padding: 44px; text-align: center; }
+    .cta-btns-table { margin: 0 auto; }
+
+    /* ── MULTIPLICA ──────────────────────────────────────────── */
+    .multiplica-wrap { padding: 40px 44px 0; }
+    .multiplica-inner {
+      background: #f5f7fb;
+      border: 1px solid #dde1ee;
+      border-top: 3px solid #0a2463;
+      border-radius: 6px;
+      padding: 28px;
+    }
+
+    /* ── CONTACT ─────────────────────────────────────────────── */
+    .contact-wrap { background: #f5f7fb; border-top: 1px solid #e0e4ef; }
+    .contact-table { width: 100%; border-collapse: collapse; }
+    .contact-cell-left { width: 50%; padding: 26px 20px 26px 44px; vertical-align: middle; }
+    .contact-cell-right { width: 50%; padding: 26px 44px 26px 20px; vertical-align: middle; border-left: 1px solid #dde1ee; }
+    .contact-label {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: #8892b0; margin-bottom: 5px;
+    }
+    .contact-value {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 20px; font-weight: 700; color: #0a2463;
+    }
+    .contact-hours {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 11px; font-weight: 400;
+      color: #8892b0; margin-top: 3px;
+    }
+
+    /* ── FOOTER ──────────────────────────────────────────────── */
+    .footer { width: 100%; display: block; line-height: 0; }
+    .footer img { width: 100%; max-width: 600px; height: auto; display: block; }
+
+    /* ════════════════════════════════════════════════════════════
+       RESPONSIVO — mobile (≤ 600px)
+    ════════════════════════════════════════════════════════════ */
+    @media only screen and (max-width: 600px) {
+
+      .email-wrapper { padding: 0 !important; }
+
+      .email-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+      }
+
+      /* Header */
+      .header-placeholder {
+        height: 56px !important;
+        background-size: cover !important;
+      }
+
+      /* Hero */
+      .hero-banner {
+        min-height: 220px !important;
+        padding: 28px 24px !important;
+        background-position: right center !important;
+      }
+      .hero-content { max-width: 100% !important; }
+      .hero-title { font-size: 26px !important; margin-bottom: 10px !important; }
+      .hero-subtitle { font-size: 14px !important; }
+
+      /* Seções de texto */
+      .body-section { padding: 28px 24px 0 !important; }
+      .section-title { font-size: 24px !important; }
+      .section-body { font-size: 15px !important; }
+      .divider { margin: 28px 24px !important; }
+
+      /* Números */
+      .numbers-strip { padding: 20px 8px !important; }
+      .number-value { font-size: 22px !important; }
+      .number-label { font-size: 9px !important; }
+      .number-cell { padding: 0 4px !important; }
+
+      /* Serviços — empilha verticalmente */
+      .services-section { padding: 0 24px !important; }
+      .services-table { display: block !important; width: 100% !important; }
+      .services-table tbody { display: block !important; }
+      .services-table tr { display: block !important; }
+      .service-td {
+        display: block !important;
+        width: 100% !important;
+        padding: 0 0 12px 0 !important;
+      }
+      .service-td:nth-child(2) { padding: 0 0 12px 0 !important; }
+      .service-td:nth-child(3) { padding: 0 !important; }
+
+      /* Indústrias */
+      .industries-banner { margin: 0 24px 28px !important; }
+      .industries-header { padding: 18px 20px !important; }
+      .industries-header .section-title { font-size: 20px !important; }
+      .logos-grid { padding: 12px !important; }
+
+      /* Grid de logos — 2 colunas no mobile */
+      .logos-table { display: block !important; width: 100% !important; }
+      .logos-table tbody { display: block !important; }
+      .logos-table tr { display: block !important; width: 100% !important; }
+      .logo-td {
+        display: inline-block !important;
+        width: 48% !important;
+        padding: 4px !important;
+        vertical-align: top !important;
+      }
+      .logo-placeholder { padding: 12px 6px !important; }
+      .logo-placeholder img { max-height: 30px !important; }
+
+      /* Mid banner */
+      .mid-banner { padding: 28px 24px !important; min-height: auto !important; }
+      .mid-banner-title { font-size: 22px !important; }
+      .mid-banner-sub { font-size: 14px !important; margin-bottom: 16px !important; }
+      .cta-btn { font-size: 12px !important; padding: 10px 18px !important; }
+      .cta-btn-outline {
+        display: block !important;
+        margin-left: 0 !important;
+        margin-top: 10px !important;
+        text-align: center !important;
+        font-size: 12px !important;
+        padding: 10px 18px !important;
+      }
+
+      /* Multiplica */
+      .multiplica-wrap { padding: 28px 24px 0 !important; }
+      .multiplica-inner { padding: 20px !important; }
+      .multiplica-inner h3 { font-size: 22px !important; }
+      .multiplica-inner p { font-size: 15px !important; }
+
+      /* CTA principal */
+      .cta-section { padding: 32px 24px !important; }
+      .cta-section .section-title { font-size: 22px !important; }
+      .cta-section .section-body { font-size: 15px !important; }
+      .cta-btns-table { display: block !important; width: 100% !important; }
+      .cta-btns-table tbody { display: block !important; }
+      .cta-btns-table tr { display: block !important; }
+      .cta-btns-table td {
+        display: block !important;
+        padding: 0 0 12px 0 !important;
+        text-align: center !important;
+      }
+      .cta-primary {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        font-size: 14px !important;
+        padding: 16px 20px !important;
+      }
+      .cta-secondary {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        font-size: 13px !important;
+        padding: 14px 20px !important;
+      }
+
+      /* Contato — empilha */
+      .contact-table { display: block !important; }
+      .contact-table tbody { display: block !important; }
+      .contact-table tr { display: block !important; }
+      .contact-cell-left {
+        display: block !important;
+        width: 100% !important;
+        padding: 24px 24px 16px !important;
+        border-bottom: 1px solid #dde1ee;
+      }
+      .contact-cell-right {
+        display: block !important;
+        width: 100% !important;
+        padding: 16px 24px 24px !important;
+        border-left: none !important;
+      }
+      .contact-value { font-size: 18px !important; }
+
+      /* Footer */
+      .footer img { width: 100% !important; height: auto !important; }
+    }
+  </style>
+</head>
+<body>
+<div class="email-wrapper">
+<div class="email-container">
+
+  <!-- HEADER -->
+  <div class="header-placeholder"></div>
+
+  <!-- HERO BANNER -->
+  <div class="hero-banner">
+    <div class="hero-content">
+      <span class="hero-badge">Boas-vindas à Riomed</span>
+      <div class="hero-title">Sua farmácia<br>sempre à frente!</div>
+      <p class="hero-subtitle">Você deu o primeiro passo. Agora descubra tudo que a Riomed tem para impulsionar o seu negócio.</p>
+    </div>
+  </div>
+
+  <!-- APRESENTAÇÃO -->
+  <div class="body-section">
+    <p class="section-eyebrow">Quem somos</p>
+    <h2 class="section-title">Conectando saúde<br>e beleza ao seu sucesso</h2>
+    <p class="section-body">
+      A <strong>Riomed</strong> é uma distribuidora especializada em produtos para <strong>saúde e beleza</strong>, com atuação em Santa Catarina, Rio Grande do Sul e Paraná. Somos o elo entre os principais laboratórios e fabricantes do mundo e as redes de farmácias, drogarias e perfumarias.
+      <br><br>
+      Com entrega ágil, mix diversificado e atendimento dedicado, trabalhamos para que <strong>seu estoque nunca pare</strong> e seu caixa continue girando.
+    </p>
+    <div class="numbers-strip">
+      <table cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td class="number-cell">
+            <span class="number-value">24h</span>
+            <span class="number-label">Prazo de<br>entrega*</span>
+          </td>
+          <td class="number-cell">
+            <span class="number-value">+7k</span>
+            <span class="number-label">SKUs no<br>mix</span>
+          </td>
+          <td class="number-cell">
+            <span class="number-value">+50</span>
+            <span class="number-label">Indústrias<br>representadas</span>
+          </td>
+          <td class="number-cell">
+            <span class="number-value">5</span>
+            <span class="number-label">Estados<br>atendidos</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- INDÚSTRIAS / MARCAS -->
+  <div class="industries-banner">
+    <div class="industries-header">
+      <p class="section-eyebrow">Nossos fornecedores</p>
+      <h2 class="section-title">As melhores <span>marcas do mercado</span><br>estão no nosso mix</h2>
+    </div>
+    <div class="logos-grid">
+      <table class="logos-table" role="presentation" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/cremer_208" class="logo-placeholder" title="Cremer">
+              <img src="https://cdn.brandfetch.io/idUU88YyfU/w/768/h/266/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B" alt="Cremer" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/accumed-g-tech-e-premium-1054" class="logo-placeholder" title="GTech Accumed">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLc4VdMWpAAl5bmnxbN-6Ew3U4v5QsIeefug&s" alt="GTech" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/mercur_214" class="logo-placeholder" title="Mercur">
+              <img src="https://cdn.dooca.store/78/brands/mercur-1.png?webp=0" alt="Mercur" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/procurar?submit_search=&controller=search&orderby=position&orderway=desc&search_query=3m" class="logo-placeholder" title="3M">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk2S_Jq6tj5UOSZsMsILrAfeJGEl2x-y7Q1w&s" alt="3M" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/blowtex_16" class="logo-placeholder" title="Blowtex">
+              <img src="https://www.globalfarma.com.br/image/cache/produtos/Laboratorios/Logo_Blowtex-600x315.png" alt="Blowtex" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/missner-e-missner_33" class="logo-placeholder" title="Missner">
+              <img src="https://missner.ind.br/wp-content/uploads/2023/03/logo-missner.png" alt="Missner" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/omron_282" class="logo-placeholder" title="Omron">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/OMRON_Logo.svg/1280px-OMRON_Logo.svg.png" alt="Omron" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/kress-farmaceutica-sa_334" class="logo-placeholder" title="Kress">
+              <img src="https://www.cirurgicaconfianca.com.br/media/upload/catalogo/laboratorio/kress.png" alt="Kress" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/natulab_292" class="logo-placeholder" title="Natulab">
+              <img src="https://natulab.com.br/wp-content/themes/natulab/images/logo-natulab-2023.webp" alt="Natulab" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/bd-hospitalar_56" class="logo-placeholder" title="BD">
+              <img src="https://cdn.cookielaw.org/logos/29abe976-120d-4d7e-9a5c-6762f9a8b2cc/cbee6830-1220-444a-b948-7a1a83716eaf/45de13cf-6fa2-4263-81ac-101dd176d218/BD_2-Color_RGB.png" alt="BD" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/beautycolor-1065" class="logo-placeholder" title="Beauty Color">
+              <img src="https://beautycolorcompany.vagas.solides.com.br/_next/image?url=https%3A%2F%2Fc5gwmsmjx1.execute-api.us-east-1.amazonaws.com%2Fprod%2Fdados_processo_seletivo%2Flogo_empresa%2F79497%2Flogo-vertical-volume-roxo%20(002).png&w=828&q=100" alt="Beauty Color" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/ever-green_55" class="logo-placeholder" title="Ever Green">
+              <img src="https://grupook.net/images/marcas/OK-EVERGREEN.png" alt="Ever Green" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/sigvaris_70" class="logo-placeholder" title="Sigvaris">
+              <img src="https://images.tcdn.com.br/img/editor/up/967884/webimage7916f7f99cac4554ba8ee4bc804cfabd.png" alt="Sigvaris" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/novartis_257" class="logo-placeholder" title="Novartis">
+              <img src="https://1000logos.net/wp-content/uploads/2020/03/Novartis-Logo.png" alt="Novartis" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/hanesbrands-kendall_308" class="logo-placeholder" title="Kendall">
+              <img src="https://www.drogariaminasbrasil.com.br/media/brand/brand/kendall.jpg" alt="Kendall" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/higiene-intima/toalha-umedecida-c-100-babybless-12539" class="logo-placeholder" title="Baby Bless">
+              <img src="https://www.jnfraldas.com.br/wp-content/uploads/2023/06/Babybless.webp" alt="Baby Bless" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/multi-multilaser_314" class="logo-placeholder" title="Multi">
+              <img src="https://logodownload.org/wp-content/uploads/2022/09/multi-logo.png" alt="Multi" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/sandoz-generico_46" class="logo-placeholder" title="Sandoz">
+              <img src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/534747_977837/Sandoz%20Logo%20Sandoz%20Blue%20RGB.png" alt="Sandoz" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/descarpack_32" class="logo-placeholder" title="Descarpack">
+              <img src="https://portaldocliente.descarpack.com.br/logo-pCE.png" alt="Descarpack" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+          <td class="logo-td">
+            <a href="https://portal.riomeddistribuicao.com.br/lbs_35" class="logo-placeholder" title="LBS Laborasa">
+              <img src="https://media.glassdoor.com/sqll/3527257/lbs-laborasa-ind%C3%BAstria-farmac%C3%AAutica-squarelogo-1663579890329.png" alt="LBS Laborasa" style="display:inline-block;max-width:100%;max-height:36px;width:auto;height:auto;" />
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- SERVIÇOS -->
+  <div class="services-section">
+    <p class="section-eyebrow">Nossos serviços</p>
+    <h2 class="section-title" style="font-size:32px;">Tudo que você precisa<br>para comprar com facilidade</h2>
+    <table class="services-table" role="presentation" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td class="service-td">
+          <div class="service-card">
+            <span class="service-icon">🛒</span>
+            <div class="service-name">E-commerce 24h</div>
+            <p class="service-desc">Acesse o portal Riomed a qualquer hora e faça seus pedidos com login e senha, sem complicações.</p>
+          </div>
+        </td>
+        <td class="service-td" style="padding:0 3px;">
+          <div class="service-card">
+            <span class="service-icon">📲</span>
+            <div class="service-name">Pedido Eletrônico</div>
+            <p class="service-desc">Baixe nosso app e realize pedidos com agilidade direto do seu dispositivo, onde estiver.</p>
+          </div>
+        </td>
+        <td class="service-td" style="padding:0 0 0 5px;">
+          <div class="service-card">
+            <span class="service-icon">🔧</span>
+            <div class="service-name">Assistência Técnica</div>
+            <p class="service-desc">Exclusividade Riomed: suporte técnico especializado para sua operação funcionar sem parar.</p>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- MID BANNER -->
+  <div class="mid-banner">
+    <div class="mid-banner-content">
+      <div class="mid-banner-title">Catálogo digital<br>na palma da mão</div>
+      <p class="mid-banner-sub">+7.000 SKUs disponíveis para consultar a qualquer hora.</p>
+      <a href="https://catalogo.riomeddistribuicao.com.br/" class="cta-btn">Ver catálogo</a>
+      <a href="https://portal.riomeddistribuicao.com.br/" class="cta-btn-outline">Acessar portal</a>
+    </div>
+  </div>
+
+  <!-- MULTIPLICA -->
+  <div class="multiplica-wrap">
+    <div class="multiplica-inner">
+      <p style="font-family:'Montserrat',Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#e8192c;margin-bottom:8px;">Exclusivo Riomed</p>
+      <h3 style="font-family:'Montserrat',Arial,sans-serif;font-size:28px;font-weight:700;color:#0a2463;line-height:1.2;margin-bottom:14px;">Conheça o <span style="color:#e8192c;">Multiplica</span></h3>
+      <p style="font-family:'Montserrat',Arial,sans-serif;font-size:16px;font-weight:400;color:#555555;line-height:1.75;margin-bottom:20px;">Nosso hub de conteúdo e capacitação para farmácias. Acesse notícias do setor, dicas de PDV e materiais exclusivos para você vender mais.</p>
+      <a href="https://riomeddistribuicao.com.br/multiplica/" style="display:inline-block;background:#0a2463;color:#fff;font-family:'Montserrat',Arial,sans-serif;font-size:13px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:14px 28px;border-radius:3px;text-decoration:none;">Acessar Multiplica</a>
+    </div>
+  </div>
+
+  <!-- CTA PRINCIPAL -->
+  <div class="cta-section">
+    <p class="section-eyebrow">Pronto para começar?</p>
+    <h2 class="section-title" style="font-size:32px;margin-bottom:16px;">Faça seu primeiro pedido<br>e sinta a diferença</h2>
+    <p class="section-body" style="max-width:420px;margin:0 auto 30px;color:#555555;">
+      Acesse o portal, explore o mix completo e garanta que sua farmácia nunca fique sem o produto certo.
+    </p>
+    <table class="cta-btns-table" role="presentation" cellpadding="0" cellspacing="0">
+      <tr>
+        <td style="padding-right:12px;">
+          <a href="https://portal.riomeddistribuicao.com.br/" class="cta-primary">Fazer meu pedido agora</a>
+        </td>
+        <td>
+          <a href="https://riomeddistribuicao.com.br/quem-somos/" class="cta-secondary">Conhecer a Riomed</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- CONTATO -->
+  <div class="contact-wrap">
+    <table class="contact-table" role="presentation" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td class="contact-cell-left">
+          <div class="contact-label">📞 Televendas</div>
+          <div class="contact-value">0800 645 0110</div>
+          <div class="contact-hours">Seg. a Sex. — 8h às 20h</div>
+        </td>
+        <td class="contact-cell-right">
+          <div class="contact-label">💬 WhatsApp</div>
+          <div class="contact-value">(47) 99270-1426</div>
+          <div class="contact-hours">Seg. a Sex. — 8h às 20h</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <img src="https://email-editor-production.s3.amazonaws.com/images/947552/editor_images/Design%20sem%20nome%20%281%29.png" alt="Riomed" />
+  </div>
+
+</div><!-- /email-container -->
+</div><!-- /email-wrapper -->
+</body>
+</html>
