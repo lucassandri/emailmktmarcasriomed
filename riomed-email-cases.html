@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riomed – Cases de Sucesso</title>
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background-color: #f0f2f5;
+      color: #333333;
+      -webkit-text-size-adjust: 100%;
+      margin: 0; padding: 0;
+    }
+
+    /* ── WRAPPER ─────────────────────────────────────────────── */
+    .email-wrapper {
+      width: 100%;
+      background-color: #f0f2f5;
+      padding: 20px 0 40px;
+    }
+    .email-container {
+      width: 600px;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    /* ── HEADER ──────────────────────────────────────────────── */
+    .header-placeholder {
+      width: 100%;
+      height: 75px;
+      background: url("https://email-editor-production.s3.amazonaws.com/images/947552/editor_images/Design%20sem%20nome.png") center/cover no-repeat;
+      display: block;
+      border-bottom: 3px solid #e8192c;
+    }
+
+    /* ── HERO BANNER ─────────────────────────────────────────── */
+    /* 💡 Sugestão de imagem (600×260px):
+       Colagem de fachadas de farmácias parceiras ou equipe Riomed
+       com sobreposição de degradê azul-marinho à esquerda         */
+    .hero-banner {
+      width: 100%;
+      min-height: 260px;
+      background: linear-gradient(120deg, #0a2463 0%, #1255b5 55%, #e8192c 100%);
+      position: relative;
+      overflow: hidden;
+      display: block;
+      padding: 44px 44px;
+    }
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      right: -60px; top: -60px;
+      width: 320px; height: 320px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      border: 50px solid rgba(255,255,255,0.05);
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 380px; }
+    .hero-badge {
+      display: inline-block;
+      background: #e8192c;
+      color: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 2px; margin-bottom: 16px;
+    }
+    .hero-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 38px; font-weight: 700;
+      color: #ffffff; line-height: 1.1; margin-bottom: 14px;
+    }
+    .hero-subtitle {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 16px; font-weight: 400;
+      color: rgba(255,255,255,0.88); line-height: 1.65;
+    }
+
+    /* ── SECTION STYLES ──────────────────────────────────────── */
+    .body-section { padding: 44px 44px 0; }
+    .section-eyebrow {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: #e8192c; margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 38px; font-weight: 700;
+      color: #0a2463; line-height: 1.15; margin-bottom: 18px;
+    }
+    .section-body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 16px; font-weight: 400;
+      line-height: 1.75; color: #444444;
+    }
+    .section-body strong { font-weight: 700; color: #0a2463; }
+
+    /* ── DIVIDER ─────────────────────────────────────────────── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #e0e4ef, transparent);
+      margin: 40px 44px;
+    }
+
+    /* ── CASES SECTION — cards 2×4 com logo + nome + cidade ─── */
+    .cases-section { padding: 0 44px; }
+    .cases-section-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: #e8192c; margin-bottom: 10px;
+    }
+    .cases-section-heading {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 28px; font-weight: 700;
+      color: #0a2463; line-height: 1.15; margin-bottom: 6px;
+    }
+    .cases-section-heading span { color: #e8192c; }
+    .cases-section-sub {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 13px; font-weight: 400;
+      color: #888; margin-bottom: 20px;
+    }
+    .cases-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+    .case-td { width: 25%; padding: 5px; vertical-align: top; }
+
+    /* card principal */
+    .case-card {
+      display: block;
+      background: #ffffff;
+      border: 1px solid #dde1ee;
+      border-radius: 8px;
+      text-decoration: none;
+      overflow: hidden;
+    }
+
+    /* topo azul com logo centrada */
+    .case-card-top {
+      background: #0a2463;
+      padding: 18px 10px 14px;
+      text-align: center;
+      line-height: 0;
+    }
+    .case-card-top img {
+      display: inline-block;
+      max-width: 80px;
+      max-height: 32px;
+      width: auto;
+      height: auto;
+    }
+
+    /* rodapé branco com nome + cidade */
+    .case-card-info {
+      padding: 10px 10px 12px;
+      border-top: 2px solid #e8192c;
+      background: #ffffff;
+      text-align: center;
+    }
+    .case-card-name {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 11px; font-weight: 700;
+      color: #0a2463;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      line-height: 1.3;
+      margin-bottom: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .case-card-city {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 10px; font-weight: 400;
+      color: #999;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── QUOTE STRIP ─────────────────────────────────────────── */
+    .quote-strip {
+      margin: 32px 44px 0;
+      background: #f5f7fb;
+      border-left: 4px solid #e8192c;
+      border-radius: 0 6px 6px 0;
+      padding: 20px 24px;
+    }
+    .quote-text {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 16px; font-weight: 400;
+      color: #444; line-height: 1.7;
+      font-style: italic;
+    }
+    .quote-text strong { font-weight: 700; color: #0a2463; font-style: normal; }
+
+    /* ── CTA BANNER ──────────────────────────────────────────── */
+    .cta-banner {
+      width: 100%;
+      background: linear-gradient(100deg, #0a2463 0%, #1255b5 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 44px 44px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      left: -40px; bottom: -40px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      border: 30px solid rgba(255,255,255,0.04);
+    }
+    .cta-banner::after {
+      content: '';
+      position: absolute;
+      right: -30px; top: -30px;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: rgba(232,25,44,0.12);
+    }
+    .cta-banner-content { position: relative; z-index: 2; }
+    .cta-banner-eyebrow {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.55); margin-bottom: 12px;
+    }
+    .cta-banner-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 28px; font-weight: 700;
+      color: #fff; line-height: 1.2; margin-bottom: 10px;
+    }
+    .cta-banner-sub {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 16px; font-weight: 400;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6; margin-bottom: 28px;
+      max-width: 400px; margin-left: auto; margin-right: auto;
+    }
+    .cta-main {
+      display: inline-block;
+      background: #e8192c;
+      color: #ffffff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 15px; font-weight: 700;
+      letter-spacing: 0.5px; text-transform: uppercase;
+      padding: 16px 40px; border-radius: 3px; text-decoration: none;
+    }
+
+    /* ── CONTACT ─────────────────────────────────────────────── */
+    .contact-wrap { background: #f5f7fb; border-top: 1px solid #e0e4ef; }
+    .contact-table { width: 100%; border-collapse: collapse; }
+    .contact-cell-left  { width: 50%; padding: 26px 20px 26px 44px; vertical-align: middle; }
+    .contact-cell-right { width: 50%; padding: 26px 44px 26px 20px; vertical-align: middle; border-left: 1px solid #dde1ee; }
+    .contact-label {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: #8892b0; margin-bottom: 5px;
+    }
+    .contact-value {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 20px; font-weight: 700; color: #0a2463;
+    }
+    .contact-hours {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 11px; font-weight: 400;
+      color: #8892b0; margin-top: 3px;
+    }
+
+    /* ── FOOTER ──────────────────────────────────────────────── */
+    .footer { width: 100%; display: block; line-height: 0; }
+    .footer img { width: 100%; max-width: 600px; height: auto; display: block; }
+
+    /* ════════════════════════════════════════════════════════════
+       RESPONSIVO — mobile (≤ 600px)
+    ════════════════════════════════════════════════════════════ */
+    @media only screen and (max-width: 600px) {
+
+      .email-wrapper { padding: 0 !important; }
+      .email-container {
+        width: 100% !important; max-width: 100% !important;
+        border-radius: 0 !important; box-shadow: none !important;
+      }
+
+      /* Header */
+      .header-placeholder { height: 56px !important; }
+
+      /* Hero */
+      .hero-banner { min-height: 200px !important; padding: 28px 24px !important; }
+      .hero-content { max-width: 100% !important; }
+      .hero-title { font-size: 26px !important; }
+      .hero-subtitle { font-size: 14px !important; }
+
+      /* Seções */
+      .body-section { padding: 28px 24px 0 !important; }
+      .section-title { font-size: 24px !important; }
+      .section-body  { font-size: 15px !important; }
+      .divider { margin: 28px 24px !important; }
+
+      /* Cases */
+      .cases-section { padding: 0 24px !important; }
+      .cases-section-heading { font-size: 22px !important; }
+      .cases-table { display: block !important; width: 100% !important; }
+      .cases-table tbody { display: block !important; }
+      .cases-table tr { display: block !important; width: 100% !important; }
+      .case-td {
+        display: inline-block !important;
+        width: 48% !important;
+        padding: 4px !important;
+        vertical-align: top !important;
+      }
+      .case-card-top img { max-width: 70px !important; max-height: 28px !important; }
+      .case-card-name { font-size: 10px !important; }
+      .case-card-city { font-size: 9px !important; }
+
+      /* Quote */
+      .quote-strip { margin: 24px 24px 0 !important; }
+      .quote-text { font-size: 14px !important; }
+
+      /* CTA banner */
+      .cta-banner { padding: 36px 24px !important; }
+      .cta-banner-title { font-size: 22px !important; }
+      .cta-banner-sub { font-size: 14px !important; margin-bottom: 22px !important; }
+      .cta-main { display: block !important; text-align: center !important; padding: 16px 20px !important; font-size: 14px !important; }
+
+      /* Contato */
+      .contact-table { display: block !important; }
+      .contact-table tbody { display: block !important; }
+      .contact-table tr { display: block !important; }
+      .contact-cell-left {
+        display: block !important; width: 100% !important;
+        padding: 24px 24px 16px !important;
+        border-bottom: 1px solid #dde1ee;
+      }
+      .contact-cell-right {
+        display: block !important; width: 100% !important;
+        padding: 16px 24px 24px !important;
+        border-left: none !important;
+      }
+      .contact-value { font-size: 18px !important; }
+
+      /* Footer */
+      .footer img { width: 100% !important; height: auto !important; }
+    }
+  </style>
+</head>
+<body>
+<div class="email-wrapper">
+<div class="email-container">
+
+  <!-- HEADER -->
+  <div class="header-placeholder"></div>
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO BANNER
+       💡 Sugestão de imagem (600×260px):
+       Colagem de fachadas de farmácias parceiras ou foto de
+       equipe Riomed com clientes — degradê azul-marinho à esquerda
+  ══════════════════════════════════════════════════════ -->
+  <div class="hero-banner">
+    <div class="hero-content">
+      <span class="hero-badge">Cases de Sucesso</span>
+      <div class="hero-title">Quem cresce,<br>cresce com a Riomed.</div>
+      <p class="hero-subtitle">Conheça as farmácias que escolheram a Riomed e transformaram seus resultados.</p>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="body-section">
+    <p class="section-eyebrow">Nossa história juntos</p>
+    <h2 class="section-title" style="font-size:32px;">Parceiros que<br>fazem a diferença</h2>
+    <p class="section-body">
+      Cada farmácia que escolhe a Riomed encontra muito mais do que um distribuidor — encontra um <strong>parceiro estratégico</strong>. Agilidade na entrega, mix completo e suporte real fazem parte do dia a dia de quem já faz parte da nossa rede.
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CASES — 6 CARDS com logo + nome + cidade (2 linhas × 3 colunas) -->
+  <div class="cases-section">
+    <p class="cases-section-title">Quem confia na Riomed</p>
+    <h2 class="cases-section-heading">Farmácias que já <span>são sucesso</span></h2>
+    <p class="cases-section-sub">Conheça quem já escolheu a Riomed como parceira de crescimento.</p>
+
+    <table class="cases-table" role="presentation" cellpadding="0" cellspacing="0" width="100%">
+      <!-- Linha 1 -->
+      <tr>
+        <td class="case-td" style="width:33.33%;">
+          <a href="https://www.farmaciasdotrabalhador.com.br/" class="case-card">
+            <div class="case-card-top">
+              <img src="https://static.wixstatic.com/media/ca77c7_5663930daaa14b2cb29552c085f02105~mv2.png/v1/fill/w_356,h_128,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/farm%C3%A1cias%20do%20trabalhador%20fct%20logo%20topo%20o.png" alt="Farmácias do Trabalhador" style="display:inline-block;max-width:80px;max-height:32px;width:auto;height:auto;" />
+            </div>
+            <div class="case-card-info">
+              <div class="case-card-name">F. do Trabalhador</div>
+              <div class="case-card-city">Santa catarina</div>
+            </div>
+          </a>
+        </td>
+        <td class="case-td" style="width:33.33%;">
+          <a href="https://www.farmaciasnissei.com.br/" class="case-card">
+            <div class="case-card-top">
+              <img src="https://bambinoclinicaintegrada.com.br/wp-content/uploads/2025/12/logo-nissei.png" alt="Farmácias do Trabalhador" style="display:inline-block;max-width:80px;max-height:32px;width:auto;height:auto;" />
+            </div>
+            <div class="case-card-info">
+              <div class="case-card-name">Farmácias Nissei</div>
+              <div class="case-card-city">Paraná</div>
+            </div>
+          </a>
+        </td>
+        <td class="case-td" style="width:33.33%;">
+          <a href="https://www.saojoaofarmacias.com.br/" class="case-card">
+            <div class="case-card-top">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Logotipo_Farm%C3%A1cias_S%C3%A3o_Jo%C3%A3o.jpg" alt="Farmácias do Trabalhador" style="display:inline-block;max-width:80px;max-height:32px;width:auto;height:auto;" />
+            </div>
+            <div class="case-card-info">
+              <div class="case-card-name">Farmácias São João</div>
+              <div class="case-card-city">Rio Grande do Sul</div>
+            </div>
+          </a>
+        </td>
+      </tr>
+      <!-- Linha 2 -->
+      <tr>
+        <td class="case-td" style="width:33.33%;">
+          <a href="https://www.acfarma.com.br/" class="case-card">
+            <div class="case-card-top">
+              <img src="https://febrafar.com.br/wp-content/uploads/2023/08/AC-Farma.png" alt="Farmácias do Trabalhador" style="display:inline-block;max-width:80px;max-height:32px;width:auto;height:auto;" />
+            </div>
+            <div class="case-card-info">
+              <div class="case-card-name">AC Farma</div>
+              <div class="case-card-city">Santa Catarina</div>
+            </div>
+          </a>
+        </td>
+        <td class="case-td" style="width:33.33%;">
+          <a href="https://loja.farmaciastrajano.com.br/w" class="case-card">
+            <div class="case-card-top">
+              <img src="https://storage.googleapis.com/download/storage/v1/b/botvendasstorage1/o/1104%2FI66c392a08264d.webp?generation=1724093088768287&alt=media" alt="Farmácias do Trabalhador" style="display:inline-block;max-width:80px;max-height:32px;width:auto;height:auto;" />
+            </div>
+            <div class="case-card-info">
+              <div class="case-card-name">Farmácias Trajano</div>
+              <div class="case-card-city">Paraná</div>
+            </div>
+          </a>
+        </td>
+        <td class="case-td" style="width:33.33%;">
+          <a href="https://farmaciasassociadas.com.br/" class="case-card">
+            <div class="case-card-top">
+              <img src="https://farmaciasassociadas.com.br/_next/image?url=%2Flogos%2Flogo-colored.png&w=256&q=75" alt="Farmácias do Trabalhador" style="display:inline-block;max-width:80px;max-height:32px;width:auto;height:auto;" />
+            </div>
+            <div class="case-card-info">
+              <div class="case-card-name">F. Associadas</div>
+              <div class="case-card-city">Rio Grande do Sul</div>
+            </div>
+          </a>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- QUOTE -->
+  <div class="quote-strip">
+    <p class="quote-text">
+      "Com a Riomed, <strong>não falta produto no estoque</strong> e o atendimento é sempre rápido. Nossa farmácia cresceu muito com essa parceria."
+    </p>
+  </div>
+
+  <!-- CTA PRINCIPAL -->
+  <div class="cta-banner">
+    <div class="cta-banner-content">
+      <p class="cta-banner-eyebrow">Faça parte</p>
+      <div class="cta-banner-title">Venha ser um cliente<br>de sucesso Riomed</div>
+      <p class="cta-banner-sub">Junte-se às farmácias que já crescem com agilidade, variedade e o suporte que o seu negócio merece.</p>
+      <a href="https://portal.riomeddistribuicao.com.br/login?back=my-account" class="cta-main">Quero ser cliente Riomed</a>
+    </div>
+  </div>
+
+  <!-- CONTATO -->
+  <div class="contact-wrap">
+    <table class="contact-table" role="presentation" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td class="contact-cell-left">
+          <div class="contact-label">📞 Televendas</div>
+          <div class="contact-value">0800 645 0110</div>
+          <div class="contact-hours">Seg. a Sex. — 8h às 20h</div>
+        </td>
+        <td class="contact-cell-right">
+          <div class="contact-label">💬 WhatsApp</div>
+          <div class="contact-value">(47) 99270-1426</div>
+          <div class="contact-hours">Seg. a Sex. — 8h às 20h</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <img src="https://email-editor-production.s3.amazonaws.com/images/947552/editor_images/Design%20sem%20nome%20%281%29.png" alt="Riomed" />
+  </div>
+
+</div><!-- /email-container -->
+</div><!-- /email-wrapper -->
+</body>
+</html>
