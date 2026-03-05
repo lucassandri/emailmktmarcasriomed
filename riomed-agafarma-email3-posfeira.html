@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riomed — Foi um prazer na Agafarma!</title>
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background-color: #f0f2f5;
+      -webkit-text-size-adjust: 100%;
+      margin: 0; padding: 0;
+    }
+    .email-wrapper { width: 100%; background-color: #f0f2f5; padding: 20px 0 40px; }
+    .email-container {
+      width: 600px; max-width: 600px; margin: 0 auto;
+      background-color: #ffffff; border-radius: 4px;
+      overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    /* HEADER */
+    .header-placeholder {
+      width: 100%; height: 75px;
+      background: url("https://email-editor-production.s3.amazonaws.com/images/947552/editor_images/Design%20sem%20nome.png") center/cover no-repeat;
+      display: block; border-bottom: 3px solid #e8192c;
+    }
+
+    /* HERO IMAGE */
+    .hero-img { width: 100%; max-width: 600px; height: auto; display: block; line-height: 0; }
+
+    /* CORPO */
+    .main-body { padding: 44px 44px 0; }
+    .eyebrow {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: #e8192c; margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: 26px; font-weight: 700;
+      color: #0a2463; line-height: 1.2; margin-bottom: 14px;
+    }
+    .body-text {
+      font-size: 16px; font-weight: 400;
+      color: #555; line-height: 1.8;
+    }
+    .body-text strong { font-weight: 700; color: #0a2463; }
+
+    /* QUOTE */
+    .quote-strip {
+      margin: 28px 44px 0;
+      background: #f5f7fb;
+      border-left: 4px solid #e8192c;
+      border-radius: 0 6px 6px 0;
+      padding: 20px 24px;
+    }
+    .quote-text {
+      font-size: 16px; font-weight: 400;
+      color: #444; line-height: 1.7; font-style: italic;
+    }
+    .quote-text strong { font-weight: 700; color: #0a2463; font-style: normal; }
+
+    /* DIVIDER */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #e0e4ef, transparent);
+      margin: 36px 44px;
+    }
+
+    /* CTA */
+    .cta-section { padding: 0 44px 44px; text-align: center; }
+    .cta-primary {
+      display: inline-block;
+      background: #e8192c; color: #ffffff;
+      font-size: 14px; font-weight: 700;
+      letter-spacing: 0.5px; text-transform: uppercase;
+      padding: 18px 52px; border-radius: 3px; text-decoration: none;
+    }
+    .cta-secondary {
+      display: inline-block;
+      background: transparent; color: #0a2463;
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 0.5px; text-transform: uppercase;
+      padding: 14px 32px; border-radius: 3px;
+      text-decoration: none; border: 2px solid #0a2463;
+      margin-top: 12px;
+    }
+    .cta-note { font-size: 12px; color: #aaa; margin-top: 12px; }
+
+    /* CONTATO */
+    .contact-wrap { background: #f5f7fb; border-top: 1px solid #e0e4ef; }
+    .contact-table { width: 100%; border-collapse: collapse; }
+    .contact-cell-left  { width: 50%; padding: 22px 20px 22px 44px; vertical-align: middle; }
+    .contact-cell-right { width: 50%; padding: 22px 44px 22px 20px; vertical-align: middle; border-left: 1px solid #dde1ee; }
+    .contact-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #8892b0; margin-bottom: 4px; }
+    .contact-value { font-size: 18px; font-weight: 700; color: #0a2463; }
+    .contact-hours { font-size: 11px; color: #8892b0; margin-top: 2px; }
+
+    /* FOOTER */
+    .footer { width: 100%; display: block; line-height: 0; }
+    .footer img { width: 100%; max-width: 600px; height: auto; display: block; }
+
+    /* MOBILE */
+    @media only screen and (max-width: 600px) {
+      .email-wrapper { padding: 0 !important; }
+      .email-container { width: 100% !important; max-width: 100% !important; border-radius: 0 !important; box-shadow: none !important; }
+      .header-placeholder { height: 56px !important; }
+      .hero-img { width: 100% !important; height: auto !important; }
+
+      .main-body { padding: 28px 24px 0 !important; }
+      .section-title { font-size: 22px !important; }
+      .body-text { font-size: 15px !important; }
+      .quote-strip { margin: 22px 24px 0 !important; }
+      .quote-text { font-size: 14px !important; }
+      .divider { margin: 28px 24px !important; }
+      .cta-section { padding: 0 24px 36px !important; }
+      .cta-primary { display: block !important; padding: 16px 20px !important; }
+      .cta-secondary { display: block !important; padding: 14px 20px !important; text-align: center !important; }
+      .contact-table { display: block !important; }
+      .contact-table tbody { display: block !important; }
+      .contact-table tr { display: block !important; }
+      .contact-cell-left { display: block !important; width: 100% !important; padding: 20px 24px 12px !important; border-bottom: 1px solid #dde1ee; }
+      .contact-cell-right { display: block !important; width: 100% !important; padding: 12px 24px 20px !important; border-left: none !important; }
+      .footer img { width: 100% !important; height: auto !important; }
+    }
+  </style>
+</head>
+<body>
+<div class="email-wrapper">
+<div class="email-container">
+
+  <div class="header-placeholder"></div>
+
+  <!-- HERO — substitua o src pela imagem final (1200 × 520px) -->
+  <!-- Texto sugerido para o designer: "Foi um prazer te ver por lá!" fundo azul-marinho, tom caloroso e de agradecimento, identidade Riomed pós-evento -->
+  <a href="https://portal.riomeddistribuicao.com.br/" style="display:block;line-height:0;">
+    <img src="hero-agafarma-posfeira.jpg" alt="Riomed — Foi um prazer te ver na Mega Feira Agafarma 2026!" class="hero-img" width="600" />
+  </a>
+
+  <!-- CORPO -->
+  <div class="main-body">
+    <p class="eyebrow">Próximo passo</p>
+    <h2 class="section-title">Tudo que conversamos<br>está no portal</h2>
+    <p class="body-text">
+      Como combinamos na feira, o portal Riomed está disponível para você fazer pedidos a qualquer hora, com o <strong>mix completo de +7.000 SKUs</strong> e entrega em até 24h para sua região.
+    </p>
+  </div>
+
+  <!-- QUOTE -->
+  <div class="quote-strip">
+    <p class="quote-text">
+      Não foi à feira? <strong>Sem problema.</strong> As condições que oferecemos no estande ainda estão disponíveis — fale com nosso time e garanta as suas.
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <p class="eyebrow" style="margin-bottom:12px;">Continue crescendo</p>
+    <h2 class="section-title" style="font-size:24px;margin-bottom:20px;">Acesse o portal e<br>faça seu primeiro pedido</h2>
+    <a href="https://portal.riomeddistribuicao.com.br/" class="cta-primary">Acessar o portal agora</a>
+    <br>
+    <a href="https://api.whatsapp.com/send?phone=5547992701426" class="cta-secondary">Falar com um representante</a>
+    <p class="cta-note">Nossa equipe está pronta para te atender.</p>
+  </div>
+
+  <!-- CONTATO -->
+  <div class="contact-wrap">
+    <table class="contact-table" role="presentation" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td class="contact-cell-left">
+          <div class="contact-label">📞 Televendas</div>
+          <div class="contact-value">0800 645 0110</div>
+          <div class="contact-hours">Seg. a Sex. — 8h às 20h</div>
+        </td>
+        <td class="contact-cell-right">
+          <div class="contact-label">💬 WhatsApp</div>
+          <div class="contact-value">(47) 99270-1426</div>
+          <div class="contact-hours">Seg. a Sex. — 8h às 20h</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="footer">
+    <img src="https://email-editor-production.s3.amazonaws.com/images/947552/editor_images/Design%20sem%20nome%20%281%29.png" alt="Riomed" />
+  </div>
+
+</div>
+</div>
+</body>
+</html>
