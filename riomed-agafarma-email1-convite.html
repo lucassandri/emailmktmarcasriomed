@@ -1,151 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Riomed na Agafarma — Salve a data!</title>
-  <!--[if mso]>
+<html lang="pt-BR" style="margin: 0; padding: 0; box-sizing: border-box">
+<head style="margin: 0; padding: 0; box-sizing: border-box">
+<meta charset="utf-8" style="margin: 0; padding: 0; box-sizing: border-box"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" style="margin: 0; padding: 0; box-sizing: border-box"/>
+<title style="margin: 0; padding: 0; box-sizing: border-box">Riomed na Agafarma — Salve a data!</title>
+<!--[if mso]>
   <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
   <![endif]-->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Montserrat', Arial, sans-serif;
-      background-color: #f0f2f5;
-      color: #333333;
-      -webkit-text-size-adjust: 100%;
-      margin: 0; padding: 0;
-    }
-    .email-wrapper { width: 100%; background-color: #f0f2f5; padding: 20px 0 40px; }
-    .email-container {
-      width: 600px; max-width: 600px; margin: 0 auto;
-      background-color: #ffffff; border-radius: 4px;
-      overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    }
-
-    /* HEADER */
-    .header-placeholder {
-      width: 100%; height: 75px;
-      background: url("https://email-editor-production.s3.amazonaws.com/images/947552/editor_images/Design%20sem%20nome.png") center/cover no-repeat;
-      display: block; border-bottom: 3px solid #e8192c;
-    }
-
-    /* HERO IMAGE */
-    .hero-img { width: 100%; max-width: 600px; height: auto; display: block; line-height: 0; }
-
-    /* INFO BAR */
-    .info-bar {
-      background: #f5f7fb;
-      border-top: 3px solid #e8192c;
-      padding: 0;
-    }
-    .info-table { width: 100%; border-collapse: collapse; }
-    .info-cell {
-      width: 33.33%; text-align: center;
-      padding: 20px 12px;
-      border-right: 1px solid #e0e4ef;
-    }
-    .info-cell:last-child { border-right: none; }
-    .info-icon { font-size: 20px; display: block; margin-bottom: 6px; }
-    .info-label {
-      font-size: 10px; font-weight: 700;
-      letter-spacing: 1.5px; text-transform: uppercase;
-      color: #8892b0; margin-bottom: 4px;
-    }
-    .info-value {
-      font-size: 13px; font-weight: 700;
-      color: #0a2463; line-height: 1.4;
-    }
-
-    /* CORPO */
-    .body-section { padding: 44px 44px 0; }
-    .eyebrow {
-      font-size: 11px; font-weight: 700;
-      letter-spacing: 2.5px; text-transform: uppercase;
-      color: #e8192c; margin-bottom: 10px;
-    }
-    .section-title {
-      font-size: 28px; font-weight: 700;
-      color: #0a2463; line-height: 1.2; margin-bottom: 14px;
-    }
-    .body-text {
-      font-size: 16px; font-weight: 400;
-      color: #555; line-height: 1.8;
-    }
-    .body-text strong { font-weight: 700; color: #0a2463; }
-
-    /* DESTAQUES */
-    .highlights { margin: 28px 44px 0; }
-    .highlight-table { width: 100%; border-collapse: collapse; }
-    .highlight-td { width: 50%; vertical-align: top; padding: 5px; }
-    .highlight-card {
-      background: #f5f7fb;
-      border-radius: 6px;
-      border-top: 3px solid #0a2463;
-      padding: 18px 16px;
-    }
-    .highlight-icon { font-size: 22px; display: block; margin-bottom: 8px; }
-    .highlight-name {
-      font-size: 12px; font-weight: 700;
-      color: #0a2463; text-transform: uppercase;
-      letter-spacing: 0.5px; margin-bottom: 6px;
-    }
-    .highlight-desc {
-      font-size: 13px; font-weight: 400;
-      color: #666; line-height: 1.6;
-    }
-
-    /* DIVIDER */
-    .divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #e0e4ef, transparent);
-      margin: 36px 44px;
-    }
-
-    /* CTA */
-    .cta-section { padding: 0 44px 44px; text-align: center; }
-    .cta-primary {
-      display: inline-block;
-      background: #e8192c; color: #ffffff;
-      font-size: 14px; font-weight: 700;
-      letter-spacing: 0.5px; text-transform: uppercase;
-      padding: 18px 52px; border-radius: 3px; text-decoration: none;
-
-      
-    }
-    
-    .cta-note {
-      font-size: 12px; color: #aaa;
-      margin-top: 12px; line-height: 1.5;
-    }
-
-
-    .cta-secondary {
-      display: inline-block;
-      background: #e8192c; color: #ffffff;
-      font-size: 8px; font-weight: 700;
-      letter-spacing: 0.5px; text-transform: uppercase;
-      padding: 5px 10px; border-radius: 3px; text-decoration: none; margin-top: 5px; margin-bottom: 5px;
-
-      
-    }
-
-    /* CONTATO */
-    .contact-wrap { background: #f5f7fb; border-top: 1px solid #e0e4ef; }
-    .contact-table { width: 100%; border-collapse: collapse; }
-    .contact-cell-left  { width: 50%; padding: 22px 20px 22px 44px; vertical-align: middle; }
-    .contact-cell-right { width: 50%; padding: 22px 44px 22px 20px; vertical-align: middle; border-left: 1px solid #dde1ee; }
-    .contact-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #8892b0; margin-bottom: 4px; }
-    .contact-value { font-size: 18px; font-weight: 700; color: #0a2463; }
-    .contact-hours { font-size: 11px; color: #8892b0; margin-top: 2px; }
-
-    /* FOOTER */
-    .footer { width: 100%; display: block; line-height: 0; }
-    .footer img { width: 100%; max-width: 600px; height: auto; display: block; }
-
-    /* MOBILE */
-    @media only screen and (max-width: 600px) {
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;display=swap" rel="stylesheet" style="margin: 0; padding: 0; box-sizing: border-box"/><style>@media only screen and (max-width: 600px) {
       .email-wrapper { padding: 0 !important; }
       .email-container { width: 100% !important; max-width: 100% !important; border-radius: 0 !important; box-shadow: none !important; }
       .header-placeholder { height: 56px !important; }
@@ -170,111 +32,101 @@
       .contact-cell-left { display: block !important; width: 100% !important; padding: 20px 24px 12px !important; border-bottom: 1px solid #dde1ee; }
       .contact-cell-right { display: block !important; width: 100% !important; padding: 12px 24px 20px !important; border-left: none !important; }
       .footer img { width: 100% !important; height: auto !important; }
-    }
-  </style>
+    }</style>
+
 </head>
-<body>
-<div class="email-wrapper">
-<div class="email-container">
-
-  <div class="header-placeholder"></div>
-
-  <!-- HERO — substitua o src pela imagem final (1200 × 520px) -->
-  <!-- Texto sugerido para o designer: título "A Riomed estará na Mega Feira Agafarma", badge vermelho com as datas 12 e 13/03, fundo azul-marinho com identidade Riomed -->
-  <a href="https://riomeddistribuicao.com.br/" style="display:block;line-height:0;">
-    <img src="https://email-editor-production.s3.amazonaws.com/images/947552/editor_images/Design%20sem%20nome%20%285%29%20%282%29.png" alt="A Riomed estará na Mega Feira Agafarma 2026 — 12 e 13 de março, Serra Park, Gramado RS" class="hero-img" width="600" />
-  </a>
-
-  <!-- INFO BAR -->
-  <div class="info-bar">
-    <table class="info-table" cellpadding="0" cellspacing="0" width="100%">
-      <tr>
-        <td class="info-cell">
-          <span class="info-icon">📅</span>
-          <div class="info-label">Data</div>
-          <div class="info-value">12 e 13 de março de 2025</div>
-        </td>
-        <td class="info-cell">
-          <span class="info-icon">📍</span>
-          <div class="info-label">Evento</div>
-          <div class="info-value">Feira Agafarma</div>
-          <div class="info-value">SERRA PARK</div>
-          <div class="info-value">Três Pinheiros-Gramado</div>
-        </td>
-        <td class="info-cell">
-          <span class="info-icon">🏷️</span>
-          <div class="info-label">Estande</div>
-          <div class="info-value">Procure pela<br>Riomed!</div>
-          <div class="info-value"><a href="https://email-editor-production.s3.amazonaws.com/images/947552/editor_images/Design%20sem%20nome%20%282%29_1.jpg"><strong>Clique aqui para acessar o mapa da feira</strong></a>
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <!-- CORPO -->
-  <div class="body-section">
-    <p class="eyebrow">Te esperamos lá</p>
-    <h2 class="section-title">O que você vai<br>encontrar no nosso estande</h2>
-    <p class="body-text">
-      Nossa equipe estará presente com tudo que você precisa para conhecer melhor a Riomed, explorar o nosso mix e aproveitar <strong>condições exclusivas disponíveis só durante a feira.</strong>
-    </p>
-  </div>
-
-  <!-- DESTAQUES -->
-  <div class="highlights">
-    <table class="highlight-table" cellpadding="0" cellspacing="0" width="100%">
-      <tr>
-        <td class="highlight-td">
-          <div class="highlight-card">
-            <span class="highlight-icon">🎯</span>
-            <div class="highlight-name">Ofertas exclusivas</div>
-            <p class="highlight-desc">Condições especiais disponíveis apenas para visitantes do estande Riomed durante a feira.</p>
-          </div>
-        </td>
-        <td class="highlight-td">
-          <div class="highlight-card">
-            <span class="highlight-icon">🤝</span>
-            <div class="highlight-name">Atendimento direto</div>
-            <p class="highlight-desc">Converse com nossos representantes e tire todas as suas dúvidas sobre produtos e parcerias.</p>
-          </div>
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- CTA -->
-  <div class="cta-section">
-    <p class="eyebrow" style="margin-bottom:12px;">Nos vemos lá</p>
-    <h2 class="section-title" style="margin-bottom:20px;">Anote na agenda:<br>12 de março</h2>
-    <a href="https://api.whatsapp.com/send?phone=5547992701426&text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20feira%20da%20Agafarma." class="cta-primary">Ver mais sobre a feira</a>
-    <p class="cta-note">Dúvidas? Fale com nosso time antes da feira.</p>
-  </div>
-
-  <!-- CONTATO -->
-  <div class="contact-wrap">
-    <table class="contact-table" role="presentation" cellpadding="0" cellspacing="0" width="100%">
-      <tr>
-        <td class="contact-cell-left">
-          <div class="contact-label">📞 Televendas</div>
-          <div class="contact-value">0800 645 0110</div>
-          <div class="contact-hours">Seg. a Sex. — 8h às 20h</div>
-        </td>
-        <td class="contact-cell-right">
-          <div class="contact-label">💬 WhatsApp</div>
-          <div class="contact-value">(47) 99270-1426</div>
-          <a href="https://api.whatsapp.com/send?phone=5547992701426&text=Ol%C3%A1,%20gostaria%20de%20..." class="cta-secondary">Entrar em contato</a>
-          <div class="contact-hours">Seg. a Sex. — 8h às 20h</div>
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="footer">
-    <img src="https://email-editor-production.s3.amazonaws.com/images/947552/editor_images/Design%20sem%20nome%20%281%29.png" alt="Riomed" />
-  </div>
-
+<body style="margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', Arial, sans-serif; background-color: #f0f2f5; color: #333333; -webkit-text-size-adjust: 100%">
+<div class="email-wrapper" style="margin: 0; padding: 20px 0 40px; box-sizing: border-box; width: 100%; background-color: #f0f2f5">
+<div class="email-container" style="margin: 0 auto; padding: 0; box-sizing: border-box; width: 600px; max-width: 600px; background-color: #ffffff; border-radius: 4px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08)">
+<div class="header-placeholder" style='margin: 0; padding: 0; box-sizing: border-box; width: 100%; height: 75px; background: url("https://email-editor-production.s3.amazonaws.com/images/947552/editor_images/Design%20sem%20nome.png") center/cover no-repeat; display: block; border-bottom: 3px solid #e8192c'></div>
+<!-- HERO — substitua o src pela imagem final (1200 × 520px) -->
+<!-- Texto sugerido para o designer: título "A Riomed estará na Mega Feira Agafarma", badge vermelho com as datas 12 e 13/03, fundo azul-marinho com identidade Riomed -->
+<a href="https://riomeddistribuicao.com.br/" style="margin: 0; padding: 0; box-sizing: border-box; display: block; line-height: 0">
+<img alt="A Riomed estará na Mega Feira Agafarma 2026 — 12 e 13 de março, Serra Park, Gramado RS" class="hero-img" src="https://email-editor-production.s3.amazonaws.com/images/947552/editor_images/Design%20sem%20nome%20%285%29%20%282%29.png" style="margin: 0; padding: 0; box-sizing: border-box; width: 100%; max-width: 600px; height: auto; display: block; line-height: 0" width="600"/>
+</a>
+<!-- INFO BAR -->
+<div class="info-bar" style="margin: 0; padding: 0; box-sizing: border-box; background: #f5f7fb; border-top: 3px solid #e8192c">
+<table cellpadding="0" cellspacing="0" class="info-table" style="margin: 0; padding: 0; box-sizing: border-box; width: 100%; border-collapse: collapse" width="100%">
+<tr style="margin: 0; padding: 0; box-sizing: border-box">
+<td class="info-cell" style="margin: 0; padding: 20px 12px; box-sizing: border-box; width: 33.33%; text-align: center; border-right: 1px solid #e0e4ef">
+<span class="info-icon" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 20px; display: block; margin-bottom: 6px">📅</span>
+<div class="info-label" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #8892b0; margin-bottom: 4px">Data</div>
+<div class="info-value" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 13px; font-weight: 700; color: #0a2463; line-height: 1.4">12 e 13 de março de 2025</div>
+</td>
+<td class="info-cell" style="margin: 0; padding: 20px 12px; box-sizing: border-box; width: 33.33%; text-align: center; border-right: 1px solid #e0e4ef">
+<span class="info-icon" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 20px; display: block; margin-bottom: 6px">📍</span>
+<div class="info-label" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #8892b0; margin-bottom: 4px">Evento</div>
+<div class="info-value" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 13px; font-weight: 700; color: #0a2463; line-height: 1.4">Feira Agafarma</div>
+<div class="info-value" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 13px; font-weight: 700; color: #0a2463; line-height: 1.4">SERRA PARK</div>
+<div class="info-value" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 13px; font-weight: 700; color: #0a2463; line-height: 1.4">Três Pinheiros-Gramado</div>
+</td>
+<td class="info-cell" style="margin: 0; padding: 20px 12px; box-sizing: border-box; width: 33.33%; text-align: center; border-right: none">
+<span class="info-icon" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 20px; display: block; margin-bottom: 6px">🏷️</span>
+<div class="info-label" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #8892b0; margin-bottom: 4px">Estande</div>
+<div class="info-value" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 13px; font-weight: 700; color: #0a2463; line-height: 1.4">Procure pela<br style="margin: 0; padding: 0; box-sizing: border-box"/>Riomed!</div>
+<div class="info-value" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 13px; font-weight: 700; color: #0a2463; line-height: 1.4"><a href="https://email-editor-production.s3.amazonaws.com/images/947552/editor_images/Design%20sem%20nome%20%282%29_1.jpg" style="margin: 0; padding: 0; box-sizing: border-box"><strong style="margin: 0; padding: 0; box-sizing: border-box">Clique aqui para acessar o mapa da feira</strong></a>
+</div></td>
+</tr>
+</table>
+</div>
+<!-- CORPO -->
+<div class="body-section" style="margin: 0; padding: 44px 44px 0; box-sizing: border-box">
+<p class="eyebrow" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #e8192c; margin-bottom: 10px">Te esperamos lá</p>
+<h2 class="section-title" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 28px; font-weight: 700; color: #0a2463; line-height: 1.2; margin-bottom: 14px">O que você vai<br style="margin: 0; padding: 0; box-sizing: border-box"/>encontrar no nosso estande</h2>
+<p class="body-text" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 16px; font-weight: 400; color: #555; line-height: 1.8">
+      Nossa equipe estará presente com tudo que você precisa para conhecer melhor a Riomed, explorar o nosso mix e aproveitar <strong style="margin: 0; padding: 0; box-sizing: border-box; font-weight: 700; color: #0a2463">condições exclusivas disponíveis só durante a feira.</strong>
+</p>
+</div>
+<!-- DESTAQUES -->
+<div class="highlights" style="margin: 28px 44px 0; padding: 0; box-sizing: border-box">
+<table cellpadding="0" cellspacing="0" class="highlight-table" style="margin: 0; padding: 0; box-sizing: border-box; width: 100%; border-collapse: collapse" width="100%">
+<tr style="margin: 0; padding: 0; box-sizing: border-box">
+<td class="highlight-td" style="margin: 0; padding: 5px; box-sizing: border-box; width: 50%; vertical-align: top">
+<div class="highlight-card" style="margin: 0; padding: 18px 16px; box-sizing: border-box; background: #f5f7fb; border-radius: 6px; border-top: 3px solid #0a2463">
+<span class="highlight-icon" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 22px; display: block; margin-bottom: 8px">🎯</span>
+<div class="highlight-name" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 12px; font-weight: 700; color: #0a2463; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px">Ofertas exclusivas</div>
+<p class="highlight-desc" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 13px; font-weight: 400; color: #666; line-height: 1.6">Condições especiais disponíveis apenas para visitantes do estande Riomed durante a feira.</p>
+</div>
+</td>
+<td class="highlight-td" style="margin: 0; padding: 5px; box-sizing: border-box; width: 50%; vertical-align: top">
+<div class="highlight-card" style="margin: 0; padding: 18px 16px; box-sizing: border-box; background: #f5f7fb; border-radius: 6px; border-top: 3px solid #0a2463">
+<span class="highlight-icon" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 22px; display: block; margin-bottom: 8px">🤝</span>
+<div class="highlight-name" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 12px; font-weight: 700; color: #0a2463; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px">Atendimento direto</div>
+<p class="highlight-desc" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 13px; font-weight: 400; color: #666; line-height: 1.6">Converse com nossos representantes e tire todas as suas dúvidas sobre produtos e parcerias.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="divider" style="margin: 36px 44px; padding: 0; box-sizing: border-box; height: 1px; background: linear-gradient(90deg, transparent, #e0e4ef, transparent)"></div>
+<!-- CTA -->
+<div class="cta-section" style="margin: 0; padding: 0 44px 44px; box-sizing: border-box; text-align: center">
+<p class="eyebrow" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #e8192c; margin-bottom: 12px">Nos vemos lá</p>
+<h2 class="section-title" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 28px; font-weight: 700; color: #0a2463; line-height: 1.2; margin-bottom: 20px">Anote na agenda:<br style="margin: 0; padding: 0; box-sizing: border-box"/>12 de março</h2>
+<a class="cta-primary" href="https://api.whatsapp.com/send?phone=5547992701426&amp;text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20feira%20da%20Agafarma." style="margin: 0; padding: 18px 52px; box-sizing: border-box; display: inline-block; background: #e8192c; color: #ffffff; font-size: 14px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; border-radius: 3px; text-decoration: none">Ver mais sobre a feira</a>
+<p class="cta-note" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 12px; color: #aaa; margin-top: 12px; line-height: 1.5">Dúvidas? Fale com nosso time antes da feira.</p>
+</div>
+<!-- CONTATO -->
+<div class="contact-wrap" style="margin: 0; padding: 0; box-sizing: border-box; background: #f5f7fb; border-top: 1px solid #e0e4ef">
+<table cellpadding="0" cellspacing="0" class="contact-table" role="presentation" style="margin: 0; padding: 0; box-sizing: border-box; width: 100%; border-collapse: collapse" width="100%">
+<tr style="margin: 0; padding: 0; box-sizing: border-box">
+<td class="contact-cell-left" style="margin: 0; padding: 22px 20px 22px 44px; box-sizing: border-box; width: 50%; vertical-align: middle">
+<div class="contact-label" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #8892b0; margin-bottom: 4px">📞 Televendas</div>
+<div class="contact-value" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 18px; font-weight: 700; color: #0a2463">0800 645 0110</div>
+<div class="contact-hours" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 11px; color: #8892b0; margin-top: 2px">Seg. a Sex. — 8h às 20h</div>
+</td>
+<td class="contact-cell-right" style="margin: 0; padding: 22px 44px 22px 20px; box-sizing: border-box; width: 50%; vertical-align: middle; border-left: 1px solid #dde1ee">
+<div class="contact-label" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #8892b0; margin-bottom: 4px">💬 WhatsApp</div>
+<div class="contact-value" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 18px; font-weight: 700; color: #0a2463">(47) 99270-1426</div>
+<a class="cta-secondary" href="https://api.whatsapp.com/send?phone=5547992701426&amp;text=Ol%C3%A1,%20gostaria%20de%20..." style="margin: 0; padding: 5px 10px; box-sizing: border-box; display: inline-block; background: #e8192c; color: #ffffff; font-size: 8px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; border-radius: 3px; text-decoration: none; margin-top: 5px; margin-bottom: 5px">Entrar em contato</a>
+<div class="contact-hours" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 11px; color: #8892b0; margin-top: 2px">Seg. a Sex. — 8h às 20h</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="footer" style="margin: 0; padding: 0; box-sizing: border-box; width: 100%; display: block; line-height: 0">
+<img alt="Riomed" src="https://email-editor-production.s3.amazonaws.com/images/947552/editor_images/Design%20sem%20nome%20%281%29.png" style="margin: 0; padding: 0; box-sizing: border-box; width: 100%; max-width: 600px; height: auto; display: block"/>
+</div>
 </div>
 </div>
 </body>
